@@ -15,7 +15,7 @@ public class TextController {
             BCryptPasswordEncoder bc = new BCryptPasswordEncoder(10);
 
             String encode = bc.encode(aa);
-            System.out.println(encode + "自带加密后的密码");
+//            System.out.println(encode + "自带加密后的密码");
         }
     }
 }

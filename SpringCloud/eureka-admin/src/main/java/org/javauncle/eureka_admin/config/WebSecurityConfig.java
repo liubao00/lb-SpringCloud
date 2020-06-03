@@ -2,7 +2,6 @@ package org.javauncle.eureka_admin.config;
 
 import org.javauncle.eureka_admin.security.JwtAuthenticationFilter;
 import org.javauncle.eureka_admin.security.JwtAuthenticationProvider;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -16,6 +15,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 
+import javax.annotation.Resource;
+
 /**
  * Spring Security Config
  * @author Louis
@@ -26,7 +27,7 @@ import org.springframework.security.web.authentication.logout.HttpStatusReturnin
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
+    @Resource
     private UserDetailsService userDetailsService;
     
     @Override

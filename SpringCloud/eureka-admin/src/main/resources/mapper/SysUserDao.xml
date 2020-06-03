@@ -20,7 +20,7 @@
         <result property="lastUpdateTime" column="last_update_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
-    <!--查询单个-->
+    <!--根据名字查询用户-->
     <select id="findByName" resultMap="SysUserMap">
         select
           id, username, nick_name, password, dept_id, state, phone_number, email, sex, del_flag, salt, create_by, create_time, last_update_by, last_update_time
